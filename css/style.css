@@ -1,0 +1,37 @@
+/* reset */
+body { margin: 0; padding: 0; }
+
+/* reset :  HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main { display: block; }
+
+/* layout */
+.l-wrapper { max-width: 1200px; margin: 0 auto; }
+
+/* style-header */
+header { position: fixed; background-color: gray; }
+
+/* style-home */
+#home {
+  height: 100vh;
+  background-color: orange;
+}
+
+#about-me {
+  background-color: orangered;
+}
+
+#portfolio {
+  background-color: aquamarine;
+}
+
+#github {
+  background-color: blueviolet;
+}
+
+#skill {
+  background-color: palevioletred;
+}
+
+footer {
+  background-color: #ddd;
+}
