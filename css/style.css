@@ -1,20 +1,48 @@
 /* reset */
-body { margin: 0; padding: 0; }
+body, p { margin: 0; padding: 0; }
 
 /* reset :  HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main { display: block; }
 
+a { text-decoration: none; color: currentColor; }
+
+/* typo */
+html { font-size: 62.5%; }
+body { font-size: 1.4rem; }
+
 /* layout */
 .l-wrapper { max-width: 1200px; margin: 0 auto; }
+.main-section { padding: 10.0rem; }
+
+/* util */
+.clearfix:after { clear:both; display: block; content: ""; }
 
 /* style-header */
-header { position: fixed; background-color: gray; }
+header { box-sizing: border-box; position: fixed; z-index: 1000; padding: 0.8em 2.0em; width: 100%; background-color: #fff; }
+.header-logo { float: left; }
+.header-nav { float: right; }
+.header-nav-item { display: inline; font-size: 1.8rem; margin: 0 0.5em; border-bottom-width: 0; }
+.header-nav-item.on { border-bottom: 4px solid #0088cc; padding-bottom: 0.5em; }
 
 /* style-home */
 #home {
+  position: relative;
   height: 100vh;
-  background-color: orange;
+  background : url(../img/visual_bg.jpg) no-repeat;
+  background-size: cover;
+  color: #fff;
 }
+.home-title { 
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%); 
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+  top:50%; left: 50%;
+  font-size: 1.4rem;
+}
+.home-title em { display: block; font-size: 5.0rem; }
 
 #about-me {
   background-color: orangered;
@@ -32,6 +60,12 @@ header { position: fixed; background-color: gray; }
   background-color: palevioletred;
 }
 
+/* style-footer */
 footer {
-  background-color: #ddd;
+  padding: 1.4em;
+  font-size: 1.2rem;
+  background-color: #f7f7f7;
+  text-align: center;
 }
+footer span { margin: 0 0.5em; font-size: 2.0rem; }
+footer p { margin-top: 1.5em; }
