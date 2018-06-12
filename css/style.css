@@ -44,23 +44,25 @@ header { box-sizing: border-box; position: fixed; z-index: 1000; padding: 0.8em 
 	transform: translate(-50%, -50%);
   top:50%; left: 50%;
   font-size: 1.4rem;
+  font-weight: normal;
 }
 .home-title em { display: block; font-size: 5.0rem; font-style: normal; }
 
 #about-me {
-  background-color: orangered;
+  background-color: #F2F2F2;
 }
-
+#interest {
+  background-color: #fff;
+}
 #portfolio {
-  background-color: aquamarine;
+  background-color: #F2F2F2;
 }
-
 #github {
   background-color: blueviolet;
 }
 
 #skill {
-  background-color: palevioletred;
+  background-color: #fff;
 }
 
 /* style-footer */
