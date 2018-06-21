@@ -58,7 +58,8 @@ header { box-sizing: border-box; position: fixed; z-index: 1000; padding: 0.8em 
 .home-title em { display: block; font-size: 5.0rem; font-style: normal; }
 
 #about-me {
-  background-color: #F2F2F2;
+  background: url(../img/about_icon.jpg) no-repeat fixed;
+  background-size: cover;
 }
 .about-contents {
   margin-left: 50%;
