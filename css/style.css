@@ -1,7 +1,8 @@
 @import url('../font/NotoSans/notosans.css'); /* font 연결 */
 
 /* reset */
-body, p { margin: 0; padding: 0; }
+body, p, ul, h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0; }
+li { list-style: none; }
 
 /* reset :  HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main { display: block; }
@@ -10,12 +11,20 @@ a { text-decoration: none; color: currentColor; }
 
 /* typo */
 html { font-size: 62.5%; }
-body { font-size: 1.4rem; font-family: 'NotoKrL', 'Malgun Gothic', 'dotum', 'gulim' , 'sans-serif'; }
+body { 
+  text-align: center;
+  font-size: 1.6rem; 
+  font-family: 'NotoKrL', 'Malgun Gothic', 'dotum', 'gulim' , 'sans-serif';
+}
 
 /* layout */
 .l-wrapper { max-width: 1200px; margin: 0 auto; }
 .main-section { padding: 10.0rem; }
-
+.l-row { border: 1px solid red; }
+.l-col { box-sizing: border-box; float: left; padding:0 0.5em; background-color: orange; }
+.l-col-6 { width: 50%; }
+.l-col-3 { width: 25%; }
+.l-col-4 { width: 33.333333333% }
 /* util */
 .clearfix:after { clear:both; display: block; content: ""; }
 .w-100 { width: 100%; }
@@ -50,6 +59,10 @@ header { box-sizing: border-box; position: fixed; z-index: 1000; padding: 0.8em 
 
 #about-me {
   background-color: #F2F2F2;
+}
+.about-contents {
+  margin-left: 50%;
+  text-align: left;
 }
 #interest {
   background-color: #fff;
