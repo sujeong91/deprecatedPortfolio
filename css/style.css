@@ -22,7 +22,7 @@ body {
 .l-wrapper { max-width: 1200px; margin: 0 auto; }
 .main-section { padding: 10.0rem; }
 .l-row { border: 1px solid red; }
-.l-col { box-sizing: border-box; float: left; padding:0 0.5em; background-color: orange; }
+.l-col { box-sizing: border-box; float: left; padding:0 0.5em; }
 .l-col-6 { width: 50%; }
 .l-col-3 { width: 25%; }
 .l-col-4 { width: 33.333333333% }
@@ -84,6 +84,19 @@ header { box-sizing: border-box; position: fixed; z-index: 1000; padding: 0.8em 
 }
 #interest {
   background-color: #fff;
+}
+#interest i {
+  font-size: 7.0rem;
+  cursor:default; 
+}
+.interest-title {
+  font-size: 2.0rem;
+  font-weight: bold;
+  padding: 1.0em 0;
+}
+.interest-description {
+  font-size: 1.4rem;
+  color: #a0a0a0;
 }
 #portfolio {
   background-color: #F2F2F2;
