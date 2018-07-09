@@ -8,6 +8,7 @@ li { list-style: none; }
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main { display: block; }
 
 a { text-decoration: none; color: currentColor; }
+button { background: transparent; border: 0; cursor: pointer; }
 
 /* typo */
 html { font-size: 62.5%; }
@@ -25,9 +26,23 @@ body {
 .l-col-6 { width: 50%; }
 .l-col-3 { width: 25%; }
 .l-col-4 { width: 33.333333333% }
+
 /* util */
 .clearfix:after { clear:both; display: block; content: ""; }
 .w-100 { width: 100%; }
+.blue_btn { background-color: #2385c6; border-color: #1476b7; color: #fff; border-radius: 0.3em; }
+.blue_btn:hover { background-color: #0f71b2; }
+.btn_normalsize { font-size: 1.8rem; padding: 0.7em 1.5em; }
+.section_title { font-size: 3.5rem; font-weight: 900; }
+.section_title_desc { margin-bottom: 3.0em;}
+.shadow_bg::before { content: ''; display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%; background-color: rgba(0,0,0,.5); }
+.content { position: relative; }
 
 /* style-header */
 header { box-sizing: border-box; position: fixed; z-index: 1000; padding: 0.8em 2.0em; width: 100%; background-color: transparent; color: #fff; }
@@ -61,6 +76,8 @@ header { box-sizing: border-box; position: fixed; z-index: 1000; padding: 0.8em 
   background: url(../img/about_icon.jpg) no-repeat fixed;
   background-size: cover;
 }
+#about-me h1 { margin-bottom: 1.0em; }
+#about-me p { margin-bottom: 2.0em; line-height: 2.0; }
 .about-contents {
   margin-left: 50%;
   text-align: left;
@@ -73,7 +90,13 @@ header { box-sizing: border-box; position: fixed; z-index: 1000; padding: 0.8em 
 }
 #github {
   background-color: blueviolet;
+  background: url(../img/github_bg.jpg) no-repeat fixed;
+  background-size: cover;
+  position: relative;
+  color: #fff;
 }
+.github_title { font-size: 4.0rem; }
+.github_title_desc { margin-bottom: 1.5em; }
 
 #skill {
   background-color: #fff;
