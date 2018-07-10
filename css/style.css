@@ -21,7 +21,7 @@ body {
 /* layout */
 .l-wrapper { max-width: 1200px; margin: 0 auto; }
 .main-section { padding: 10.0rem; }
-.l-row { border: 1px solid red; }
+.l-row { /*border: 1px solid red;*/ }
 .l-col { box-sizing: border-box; float: left; padding:0 0.5em; }
 .l-col-6 { width: 50%; }
 .l-col-3 { width: 25%; }
@@ -110,6 +110,10 @@ header { box-sizing: border-box; position: fixed; z-index: 1000; padding: 0.8em 
   height: 300px;
   overflow: hidden;
   border: 1px solid #dadada;
+  background-color: #fff;
+}
+.portfolio-frame-img {
+  width: 100%;
 }
 #github {
   background-color: blueviolet;
@@ -128,6 +132,8 @@ header { box-sizing: border-box; position: fixed; z-index: 1000; padding: 0.8em 
 .skill-title {
   font-weight: bold;
   font-size: 1.8rem;
+  color:#2385c6;
+  margin:0.5em;
 }
 
 /* style-footer */
