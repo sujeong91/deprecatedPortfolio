@@ -32,7 +32,8 @@ body {
 .w-100 { width: 100%; }
 .blue_btn { background-color: #2385c6; border-color: #1476b7; color: #fff; border-radius: 0.3em; }
 .blue_btn:hover { background-color: #0f71b2; }
-.btn_normalsize { font-size: 1.8rem; padding: 0.7em 1.5em; }
+.btn_normalsize { display: inline-block; font-size: 1.8rem; padding: 0.7em 1.5em; }
+.btn_narrow { display: inline-block; font-size: 1.4rem; padding: 0.5em 1.8em 0.6em; }
 .section_title { font-size: 3.5rem; font-weight: 900; }
 .section_title_desc { margin-bottom: 3.0em;}
 .shadow_bg::before { content: ''; display: block;
@@ -46,10 +47,11 @@ body {
 
 /* style-header */
 header { box-sizing: border-box; position: fixed; z-index: 1000; width: 100%; background-color: transparent; color: #fff; transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1); }
-header.scrollOn { background-color: #FFF; color: #333; box-shadow: 0px 2px 12px rgba(0,0,0,.3) }
+header.scrollOn { background-color: #FFF; color: #333; box-shadow: 0px 2px 12px rgba(0,0,0,.3); }
 .header-logo { float: left; width: 8em; margin: 1.0em 2.0em 0; }
 .header-nav { float: right; margin-right: 1.0em; }
 .header-nav-item { display: inline-block; font-size: 1.8rem; padding: 0.8em 1.0em; border-bottom-width: 0; }
+.header-nav-item:hover { color: #0088cc; }
 .header-nav-item.on { border-bottom: 4px solid #0088cc; padding-bottom: 0.8em; border-radius:1px; }
 
 /* style-home */
@@ -107,23 +109,40 @@ header.scrollOn { background-color: #FFF; color: #333; box-shadow: 0px 2px 12px 
   font-size: 1.4rem;
   color: #a0a0a0;
 }
-#portfolio {
-  background-color: #F2F2F2;
-}
+
+#portfolio { background-color: #F2F2F2; }
 #portfolio .l-col { margin-bottom: 5.0rem; }
-.portfolio-title { 
-  font-size: 1.5rem;
-}
+.portfolio-title { font-size: 1.8rem; margin-top: 0.5em; }
 .portfolio-frame {
+  position: relative;
   width: 100%;
   height: 300px;
   overflow: hidden;
   border: 1px solid #dadada;
   background-color: #fff;
 }
-.portfolio-frame-img {
-  width: 100%;
+.portfolio-hiddenFrame {
+  /* display:none; */
+  position: absolute;
+  top:0; bottom:0;left:0;right:0;
+  background-color: rgba(0,0,0,.8);
+  color: #fff;
 }
+.portfolio-hiddenFrame-textbox {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+  text-align: left;
+}
+.portfolio-hiddenFrame-textbox p {
+  margin-bottom: 1.0em;
+  font-size: 1.4rem;
+}
+.portfolio-hiddenFrame-title { color: #3abafa; }
+.portfolio-frame-img { width: 100%; }
+.pf_btn { margin-top: 2.0em; }
+
 #github {
   background-color: blueviolet;
   background: url(../img/github_bg.jpg) no-repeat fixed;
@@ -156,4 +175,5 @@ footer {
   text-align: center;
 }
 footer a { margin: 0 0.5em; font-size: 2.0rem; }
+footer a:hover { color: #2385c6; }
 footer p { margin-top: 1.5em; }
