@@ -43,10 +43,13 @@ function scrollChangeHeader() {
  */
 
 function menuUnderlineEffect() {
-  var $navItem = null;
-  var $currentNavItem = null;
-  var $sectionLocation = null;
-  var currentLocation = 0;
+  var $navItem = null;            // 메뉴
+  var $section = null;            // section
+  var $window = null;             // window
+  var $currentNavItem = null;     // 현재 메뉴
+  var $sectionLocation = null;    // 이동하는 섹션의 위치
+  var winSct = 0;                 // 현재 윈도우의 top위치
+  var activeScroll = true;        // 스크롤 이벤트 작동여부
 
   function start() {
     init();
@@ -55,38 +58,71 @@ function menuUnderlineEffect() {
 
   function init() {
     $navItem = $(".header-nav-item");
+    $section = $("section");
+    $window = $(window);
   }
 
   function initEvent() {
     $navItem.on("click", function(event){
       event.preventDefault();
       var that = $(this);
+      activeScroll = false;
       underlineEffect(that);
       linkSection();
     });
 
-    $(window).scroll(function(){
-      currentLocation = $(document).scrollTop();
-      // console.log(currentLocation);
-      // 스크롤 될 때마다 해당 section을 찾아서  해당 메뉴에 언더라인 칠하기
+    $window.scroll(function(){
+      if ( activeScroll == true ) {
+        winSct = $window.scrollTop();
+        currentNav();
+      }
     });
   }
 
   function underlineEffect(that) {
-    if ( $currentNavItem ) {
-      $currentNavItem.removeClass("on");
-    }
+    if ( $currentNavItem ) $currentNavItem.removeClass("on");
 
     $currentNavItem = that;
     $currentNavItem.addClass("on");
   }
 
   function linkSection() {
-    $sectionLocation = $($currentNavItem.attr("href")).offset().top;
-    $('html,body').stop().animate({scrollTop : $sectionLocation - 55}, 1000);
+    $sectionLocation = $("#" + $currentNavItem.attr("href")).offset().top;
+    $('html,body').stop().animate({scrollTop : $sectionLocation - 55}, 1000, "easeInOutCubic", function() {
+      activeScroll = true;
+    });
+  }
+
+  function currentNav() {
+    $section.each(function () {
+      var $self = $(this),
+          selfValue = $self.attr("id"),
+          selfNav = $(".header-nav-item[href=" + selfValue + "]"),
+          secOft = $self.offset().top,
+          checkCurrent = secOft - winSct;
+
+      if ( checkCurrent < 300 ) {
+        underlineEffect(selfNav);
+      }
+    });
   }
 
   start();
+}
+
+/*
+ * [func] showDetail
+ * : 포트폴리오 상세보기 효과
+ */
+function showDetail() {
+  $(".portfolio-frame").on({
+    "mouseenter": function() {
+      $(this).children(".portfolio-hiddenFrame").fadeIn();
+    },
+    "mouseleave": function() {
+      $(this).children(".portfolio-hiddenFrame").fadeOut();
+    }
+  });
 }
 
 
@@ -94,4 +130,5 @@ function menuUnderlineEffect() {
 $(document).ready(function() {
   scrollChangeHeader();
   menuUnderlineEffect();
+  showDetail();
 });

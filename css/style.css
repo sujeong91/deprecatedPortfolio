@@ -3,12 +3,12 @@
 /* reset */
 body, p, ul, h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0; }
 li { list-style: none; }
+a { text-decoration: none; color: currentColor; }
+button { background: transparent; border: 0; cursor: pointer; }
+table { border-collapse: collapse; border-spacing: 0; }
 
 /* reset :  HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main { display: block; }
-
-a { text-decoration: none; color: currentColor; }
-button { background: transparent; border: 0; cursor: pointer; }
 
 /* typo */
 html { font-size: 62.5%; }
@@ -58,9 +58,15 @@ header.scrollOn { background-color: #FFF; color: #333; box-shadow: 0px 2px 12px 
 #home {
   position: relative;
   height: 100vh;
-  background : url(../img/visual_bg.jpg) no-repeat;
-  background-size: cover;
+  min-height: 400px;
   color: #fff;
+  overflow:hidden;
+}
+.home-bg {
+  position: absolute;
+  top:0; bottom:0; left:0; right:0;
+  background : url(../img/visual_bg.jpg) 50% 50% no-repeat;
+  background-size: cover;
 }
 .home-cover {
   position: absolute;
@@ -68,7 +74,8 @@ header.scrollOn { background-color: #FFF; color: #333; box-shadow: 0px 2px 12px 
   bottom:0;
   left:0;
   right:0;
-  background-color:rgba(0,0,0,.5);
+  background: linear-gradient(to left, #34353b, #100609);
+  opacity: 0.8;
 }
 .home-title { 
   position: absolute;
@@ -82,7 +89,19 @@ header.scrollOn { background-color: #FFF; color: #333; box-shadow: 0px 2px 12px 
   font-weight: normal;
 }
 .home-title em { display: block; font-size: 5.0rem; font-style: normal; }
+.home-scroll {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  -webkit-transform: translate(-50%); 
+	-moz-transform: translate(-50%);
+	-ms-transform: translate(-50%);
+	-o-transform: translate(-50%);
+  transform: translate(-50%);
+  width: 50px;
+}
 
+/* style-about-me */
 #about-me {
   background: url(../img/about_icon.jpg) no-repeat fixed;
   background-size: cover;
@@ -93,6 +112,16 @@ header.scrollOn { background-color: #FFF; color: #333; box-shadow: 0px 2px 12px 
   margin-left: 50%;
   text-align: left;
 }
+.about-table { width: 60%; }
+.about-table th, .about-table td {
+  /* border-bottom: 1px solid #333; */
+  padding: 0.3em 0.5em;
+}
+.about-table th {
+  background-color: rgba(202, 234, 255,.5);
+  text-align: center;
+}
+
 #interest {
   background-color: #fff;
 }
@@ -122,7 +151,7 @@ header.scrollOn { background-color: #FFF; color: #333; box-shadow: 0px 2px 12px 
   background-color: #fff;
 }
 .portfolio-hiddenFrame {
-  /* display:none; */
+  display:none;
   position: absolute;
   top:0; bottom:0;left:0;right:0;
   background-color: rgba(0,0,0,.8);
@@ -177,3 +206,51 @@ footer {
 footer a { margin: 0 0.5em; font-size: 2.0rem; }
 footer a:hover { color: #2385c6; }
 footer p { margin-top: 1.5em; }
+
+/* animation */
+.ani-bgMove {
+  -webkit-animation: ani-bgMove 10s infinite forwards;
+  -o-animation: ani-bgMove 10s infinite forwards;
+  animation: ani-bgMove 10s infinite forwards;
+}
+@keyframes ani-bgMove {
+  0% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1); }
+  30% {
+    -webkit-transform: scale(1.01);
+    -moz-transform: scale(1.01);
+    -ms-transform: scale(1.01);
+    -o-transform: scale(1.01);
+    transform: scale(1.01); }
+  60% {
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    -o-transform: scale(1.02);
+    transform: scale(1.02); }
+  100% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1); } 
+}
+.ani-bgShine {
+  -webkit-animation: ani-bgShine 10s infinite forwards;
+  -o-animation: ani-bgShine 10s infinite forwards;
+  animation: ani-bgShine 10s infinite forwards;
+}
+@keyframes ani-bgShine {
+  0% {
+    opacity: 0.6; }
+  30% {
+    opacity: 0.5; }
+  60% {
+    opacity: 0.4; }
+  100% {
+    opacity: 0.6; } 
+}
