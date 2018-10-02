@@ -125,10 +125,23 @@ function showDetail() {
   });
 }
 
-
 /* 실행 */
 $(document).ready(function() {
   scrollChangeHeader();
   menuUnderlineEffect();
   showDetail();
+
+  if ($(window).width() <= 375) {
+    $(".header-logo").click(function(e){
+      e.preventDefault();
+
+      if ( $(".header-nav").hasClass("open") ) {
+        $(".header-nav").removeClass("open");
+        $(".header-nav").slideUp();
+      } else {
+        $(".header-nav").addClass("open");
+        $(".header-nav").slideDown();
+      }
+    });
+  }
 });
