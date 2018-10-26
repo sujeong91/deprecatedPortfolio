@@ -1,3 +1,24 @@
+/* 실행 */
+$(document).ready(function() {
+  scrollChangeHeader();
+  menuUnderlineEffect();
+  showDetail();
+
+  if ($(window).width() <= 375) {
+    $(".header-logo").click(function(e){
+      e.preventDefault();
+
+      if ( $(".header-nav").hasClass("open") ) {
+        $(".header-nav").removeClass("open");
+        $(".header-nav").slideUp();
+      } else {
+        $(".header-nav").addClass("open");
+        $(".header-nav").slideDown();
+      }
+    });
+  }
+});
+
 /*
  * [func] scrollChangeHeader
  * : 지정한 포인트에 스크롤이 지나가면 header 변환
@@ -124,24 +145,3 @@ function showDetail() {
     }
   });
 }
-
-/* 실행 */
-$(document).ready(function() {
-  scrollChangeHeader();
-  menuUnderlineEffect();
-  showDetail();
-
-  if ($(window).width() <= 375) {
-    $(".header-logo").click(function(e){
-      e.preventDefault();
-
-      if ( $(".header-nav").hasClass("open") ) {
-        $(".header-nav").removeClass("open");
-        $(".header-nav").slideUp();
-      } else {
-        $(".header-nav").addClass("open");
-        $(".header-nav").slideDown();
-      }
-    });
-  }
-});
