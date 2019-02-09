@@ -30,8 +30,8 @@
       <h1 class="blind">navigation</h1>
       <a class="header-nav-item on" href="home">Home</a>
       <a class="header-nav-item" href="about-me">Contact</a>
-      <a class="header-nav-item" href="skill">skills</a>
-      <a class="header-nav-item" href="portfolio">Portfolio</a>
+      <a class="header-nav-item" href="skill">Skills</a>
+      <a class="header-nav-item" href="portfolio">Works</a>
       <a class="header-nav-item" href="github">AboutMe</a>
     </nav>
   </header>
@@ -70,6 +70,15 @@
             <tr>
               <th>메일</th>
               <td>susu.91@daum.net</td>
+            </tr>
+            <tr>
+              <th>이력</th>
+              <td>
+                <p class="total-career">총 경력: <strong>2</strong>년차 개발자</p>
+                퍼블리싱 프리랜서<br>
+                코디소프트 퍼블리셔 주임<br>
+                프론트엔드 개발 대리<br>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -125,8 +134,11 @@
   </section>
   <section id="portfolio" class="main-section">
     <div class="l-wrapper">
-      <h1 class="section_title">PORTFOLIO</h1>
-      <p class="section_title_desc">제가 그동안 작업한 결과물을 소개합니다.</p>
+      <h1 class="section_title">WORKS</h1>
+      <p class="section_title_desc">
+        일하면서 작업한 결과물을 소개합니다.<br>
+        공부하면서 만든 저의 코드를 보고 싶다면 <a href="https://github.com/sujeong91" target="_blank">github</a>를 참고해주세요.
+      </p>
 
       <ul class="l-row clearfix">
         <!-- <li class="l-col l-col-4">
@@ -135,20 +147,7 @@
           </div>
           <p class="portfolio-title">리액트1</p>
         </li> -->
-        <li class="l-col l-col-4">
-          <div class="portfolio-frame">
-            <img class="portfolio-frame-img" src="img/socar.jpg" alt="" style="border-bottom: 1px solid #ddd;border-top: 1px solid #ddd; margin-top: 10%;">
-            <div class="portfolio-hiddenFrame">
-              <div class="portfolio-hiddenFrame-textbox">
-                <p><span class="portfolio-hiddenFrame-title">설명</span>: socar 관리자페이지 퍼블리싱 외주</p>
-                <p><span class="portfolio-hiddenFrame-title">특징</span>: 백엔드, js 기능이 구현되어 있는 페이지에 디자인과 마크업만 변경</p>
-                <p><span class="portfolio-hiddenFrame-title">본인기여도</span>: 기존 구현기능을 건들이지 않으면서 html, css변경 100%, 디자인 0%</p>
-                <a href="#!" target="_blank"><div class="btn_narrow blue_btn pf_btn">more</div></a>
-              </div>
-            </div>
-          </div>
-          <p class="portfolio-title">SOCAR 관리자페이지 퍼블리싱[프리]</p>
-        </li>
+        
         <li class="l-col l-col-4">
           <div class="portfolio-frame">
             <img class="portfolio-frame-img" src="img/ar_player.jpg" alt="" style="padding-top: 12%;">
@@ -157,7 +156,7 @@
                 <p><span class="portfolio-hiddenFrame-title">설명</span>: 의사교육용 학습동영상 제작</p>
                 <p><span class="portfolio-hiddenFrame-title">특징</span>: 동영상에 가상태그를 심어 편집동영상을 넘어선 실시간 학습기능 제공, 360˚ view</p>
                 <p><span class="portfolio-hiddenFrame-title">본인기여도</span>: 촬영, 스크립팅 계획서 작성, 플랫폼 마크업 100%, UI Scripting 100%, 동영상 action scripting 100%</p>
-                <a href="#!" target="_blank"><div class="btn_narrow blue_btn pf_btn">more</div></a>
+                <!-- <a href="#!" target="_blank"><div class="btn_narrow blue_btn pf_btn">more</div></a> -->
               </div>
             </div>
           </div>
@@ -170,40 +169,68 @@
               <div class="portfolio-hiddenFrame-textbox">
                 <p><span class="portfolio-hiddenFrame-title">설명</span>: 성형외과 홈페이지 리뉴얼 및 유지보수</p>
                 <p><span class="portfolio-hiddenFrame-title">특징</span>: 코드이그나이터기반, 게시판연동, 예약서비스기능</p>
-                <p><span class="portfolio-hiddenFrame-title">본인기여도</span>: 마크업 100%, UI Scripting 100%, 게시판 유지보수, 코드이그나이터 MVC패턴의 이해</p>
-                <a href="#!" target="_blank"><div class="btn_narrow blue_btn pf_btn">more</div></a>
+                <p><span class="portfolio-hiddenFrame-title">본인기여도</span>: 마크업 100%, UI Scripting 100%, 게시판 유지보수</p>
+                <!-- <a href="#!" target="_blank"><div class="btn_narrow blue_btn pf_btn">more</div></a> -->
               </div>
             </div>
           </div>
-          <p class="portfolio-title">병원 홈페이지 제작 및 유지보수</p>
+          <p class="portfolio-title">성형외과 홈페이지 제작 및 유지보수</p>
         </li>
         <li class="l-col l-col-4">
           <div class="portfolio-frame">
-            <img class="portfolio-frame-img" src="img/Matx.jpg" alt="">
+            <img class="portfolio-frame-img" src="img/b1pay.jpg" alt="">
             <div class="portfolio-hiddenFrame">
               <div class="portfolio-hiddenFrame-textbox">
-                <p><span class="portfolio-hiddenFrame-title">설명</span>: 메인Tamplete 시안을 저의 기술로 재구현한 홈페이지</p>
-                <p><span class="portfolio-hiddenFrame-title">특징</span>: scss사용, 반응형, slick등 플러그인 활용.</p>
-                <p><span class="portfolio-hiddenFrame-title">본인기여도</span>: 마크업 100%, UI Scripting 100%</p>
-                <a href="http://sjorbit.dothome.co.kr/matx/" target="_blank"><div class="btn_narrow blue_btn pf_btn">more</div></a>
+                <p><span class="portfolio-hiddenFrame-title">설명</span>: 선정산 서비스 플랫폼 개발</p>
+                <p><span class="portfolio-hiddenFrame-title">특징</span>: 백은 java기반, 프론트는 jquery기반 구성</p>
+                <p><span class="portfolio-hiddenFrame-title">본인기여도</span>: 퍼블리싱 및 UI scripting, ajax를 활용한 데이터 바인딩 100%</p>
+                <!-- <div href="http://sjorbit.dothome.co.kr/matx/" target="_blank"><div class="btn_narrow blue_btn pf_btn">more</div></div> -->
               </div>
             </div>
           </div>
-          <p class="portfolio-title">Matx Main 구현</p>
+          <p class="portfolio-title">b1pay 프론트 개발</p>
         </li>
         <li class="l-col l-col-4">
           <div class="portfolio-frame">
-            <img class="portfolio-frame-img" src="img/Marketer.jpg" alt="">
+            <img class="portfolio-frame-img" src="img/free_kb.jpg" alt="프리랜서 KB증권">
             <div class="portfolio-hiddenFrame">
               <div class="portfolio-hiddenFrame-textbox">
-                <p><span class="portfolio-hiddenFrame-title">설명</span>: 메인Tamplete 시안을 저의 기술로 재구현한 홈페이지</p>
-                <p><span class="portfolio-hiddenFrame-title">특징</span>: 반응형, slick등 플러그인 활용.</p>
+                <p><span class="portfolio-hiddenFrame-title">설명</span>: KB증권 교육사이트 퍼블리싱 외주</p>
+                <p><span class="portfolio-hiddenFrame-title">특징</span>: 모바일/PC 적응형 작업.</p>
                 <p><span class="portfolio-hiddenFrame-title">본인기여도</span>: 마크업 100%, UI Scripting 100%</p>
-                <a href="http://sjorbit.dothome.co.kr/marketer/" target="_blank"><div class="btn_narrow blue_btn pf_btn">more</div></a>
+                <!-- <a href="http://sjorbit.dothome.co.kr/marketer/" target="_blank"><div class="btn_narrow blue_btn pf_btn">more</div></a> -->
               </div>
             </div>
           </div>
-          <p class="portfolio-title">Marketer Main 구현</p>
+          <p class="portfolio-title">KB증권 교육 퍼블리싱</p>
+        </li>
+        <li class="l-col l-col-4">
+          <div class="portfolio-frame">
+            <img class="portfolio-frame-img" src="img/free_tv.jpg" alt="" style="border-bottom: 1px solid #ddd;border-top: 1px solid #ddd; margin-top: 10%;">
+            <div class="portfolio-hiddenFrame">
+              <div class="portfolio-hiddenFrame-textbox">
+                <p><span class="portfolio-hiddenFrame-title">설명</span>: 신기한나라 관리자페이지 퍼블리싱 외주</p>
+                <p><span class="portfolio-hiddenFrame-title">특징</span>: pc적응형. </p>
+                <p><span class="portfolio-hiddenFrame-title">본인기여도</span>: 마크업 100%, UI Scripting 100%</p>
+                <!-- <a href="#!" target="_blank"><div class="btn_narrow blue_btn pf_btn">more</div></a> -->
+              </div>
+            </div>
+          </div>
+          <p class="portfolio-title">신기한나라 관리자페이지 퍼블리싱</p>
+        </li>
+        <li class="l-col l-col-4">
+          <div class="portfolio-frame">
+            <img class="portfolio-frame-img" src="img/socar.jpg" alt="" style="border-bottom: 1px solid #ddd;border-top: 1px solid #ddd; margin-top: 10%;">
+            <div class="portfolio-hiddenFrame">
+              <div class="portfolio-hiddenFrame-textbox">
+                <p><span class="portfolio-hiddenFrame-title">설명</span>: socar 관리자페이지 퍼블리싱 외주</p>
+                <p><span class="portfolio-hiddenFrame-title">특징</span>: 백엔드, js 기능이 구현되어 있는 페이지에 디자인과 마크업만 변경</p>
+                <p><span class="portfolio-hiddenFrame-title">본인기여도</span>: 기존 구현기능을 건들이지 않으면서 html, css변경 100%, 디자인 0%</p>
+                <!-- <a href="#!" target="_blank"><div class="btn_narrow blue_btn pf_btn">more</div></a> -->
+              </div>
+            </div>
+          </div>
+          <p class="portfolio-title">SOCAR 관리자페이지 퍼블리싱</p>
         </li>
       </ul>
     </div>

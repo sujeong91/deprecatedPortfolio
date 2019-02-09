@@ -158,14 +158,14 @@ var portfolio = {
 
 };
 
-var myLib = {
-  pop : function(msg) {
-    var popUI = $("<div class='popBg'><div class='popContent'>"+ msg +"</div></div>");
-    $("body").prepend(popUI);
-    $(".popBg").stop().delay(1000).animate({"opacity": 0}, {
-      duration: 1500,
-      complete: function(){ $(".popBg").remove(); }
-      }
-    );
-  }
-};
+// var myLib = {
+//   pop : function(msg) {
+//     var popUI = $("<div class='popBg'><div class='popContent'>"+ msg +"</div></div>");
+//     $("body").prepend(popUI);
+//     $(".popBg").stop().delay(1000).animate({"opacity": 0}, {
+//       duration: 1500,
+//       complete: function(){ $(".popBg").remove(); }
+//       }
+//     );
+//   }
+// };
